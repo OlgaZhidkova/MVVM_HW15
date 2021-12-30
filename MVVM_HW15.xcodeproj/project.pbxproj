@@ -56,15 +56,63 @@
 		77DF0403277E6E7C00E12EFA /* MVVM_HW15 */ = {
 			isa = PBXGroup;
 			children = (
-				77DF0404277E6E7C00E12EFA /* AppDelegate.swift */,
-				77DF0406277E6E7C00E12EFA /* SceneDelegate.swift */,
-				77DF0408277E6E7C00E12EFA /* ViewController.swift */,
-				77DF040A277E6E7C00E12EFA /* Main.storyboard */,
-				77DF040D277E6E7F00E12EFA /* Assets.xcassets */,
-				77DF040F277E6E7F00E12EFA /* LaunchScreen.storyboard */,
-				77DF0412277E6E7F00E12EFA /* Info.plist */,
+				77DF0419277E708A00E12EFA /* Sourses */,
+				77DF0418277E707700E12EFA /* Resourses */,
 			);
 			path = MVVM_HW15;
+			sourceTree = "<group>";
+		};
+		77DF0418277E707700E12EFA /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				77DF0404277E6E7C00E12EFA /* AppDelegate.swift */,
+				77DF0406277E6E7C00E12EFA /* SceneDelegate.swift */,
+				77DF040D277E6E7F00E12EFA /* Assets.xcassets */,
+				77DF0412277E6E7F00E12EFA /* Info.plist */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		77DF0419277E708A00E12EFA /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				77DF041C277E70CB00E12EFA /* Models */,
+				77DF041B277E70BE00E12EFA /* Views */,
+				77DF041A277E70A500E12EFA /* ViewModels */,
+			);
+			path = Sourses;
+			sourceTree = "<group>";
+		};
+		77DF041A277E70A500E12EFA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		77DF041B277E70BE00E12EFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77DF0408277E6E7C00E12EFA /* ViewController.swift */,
+				77DF041D277E712D00E12EFA /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		77DF041C277E70CB00E12EFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		77DF041D277E712D00E12EFA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				77DF040F277E6E7F00E12EFA /* LaunchScreen.storyboard */,
+				77DF040A277E6E7C00E12EFA /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVVM_HW15/Info.plist;
+				INFOPLIST_FILE = MVVM_HW15/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVVM_HW15/Info.plist;
+				INFOPLIST_FILE = MVVM_HW15/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
