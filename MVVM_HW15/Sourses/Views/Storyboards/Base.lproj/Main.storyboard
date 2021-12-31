@@ -47,7 +47,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHQ-T2-qga">
                                 <rect key="frame" x="120" y="375" width="174" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="LOGIN"/>
+                                <buttonConfiguration key="configuration" style="gray" title="LOGIN">
+                                    <color key="baseBackgroundColor" red="0.62116707731679521" green="1" blue="0.74545972063660249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2LU-Yy-jiL"/>
                                 </connections>
