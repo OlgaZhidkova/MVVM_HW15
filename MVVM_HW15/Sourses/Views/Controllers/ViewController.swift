@@ -7,13 +7,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Storyboardable {
+    
+    weak var coordinator: AppCoordinator?
+    
+    @IBAction func openSecondVC(_ sender: Any) {
+        coordinator?.openSecondVC()
+    }
     
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var statusLabel: UILabel!
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
-        viewModel.loginButtonPressed(login: (loginField.text ?? ""), password: (passField.text ?? ""))
+        viewModel.loginButtonPressed(login: (loginField.text ?? ""),
+                                     password: (passField.text ?? ""))
+        if viewModel.statusText.value == "SUCCESS" {
+            coordinator?.openThirdVC()
+        }
         loginField.text = ""
         passField.text = ""
     }
