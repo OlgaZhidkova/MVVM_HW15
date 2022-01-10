@@ -11,6 +11,10 @@ class ThirdViewController: UIViewController, Storyboardable {
     
     weak var coordinator: AppCoordinator?
 
+    @IBAction func backToStartPage(_ sender: Any) {
+        coordinator?.start()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Welcome"
