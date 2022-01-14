@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVM_HW15" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MVVM_HW15" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,14 @@
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-qa-dGs">
+                                <rect key="frame" x="20" y="531" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter without authorization"/>
+                                <connections>
+                                    <action selector="openSecondVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDG-ID-jat"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,15 +76,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3oZ-1D-rVo" secondAttribute="trailing" constant="20" id="2yU-us-qeD"/>
                             <constraint firstItem="Qwf-ko-ieA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="5J1-sb-gof"/>
                             <constraint firstItem="knQ-av-W9o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="724-lQ-dKO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3Z-qa-dGs" secondAttribute="trailing" constant="20" id="8D6-q7-sKN"/>
                             <constraint firstItem="goM-QK-dyM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hqf-SS-PZi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qwf-ko-ieA" secondAttribute="trailing" constant="20" id="Jfd-Fh-DxP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="knQ-av-W9o" secondAttribute="trailing" constant="20" id="M7w-2P-jgN"/>
                             <constraint firstItem="5fn-5K-bPR" firstAttribute="top" secondItem="Qwf-ko-ieA" secondAttribute="bottom" constant="20" id="NFZ-ak-pYz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r3Z-qa-dGs" secondAttribute="bottom" constant="300" id="Q42-wn-N2b"/>
                             <constraint firstItem="goM-QK-dyM" firstAttribute="top" secondItem="5fn-5K-bPR" secondAttribute="bottom" constant="8" symbolic="YES" id="Rcs-Hw-Dbx"/>
                             <constraint firstItem="hbT-zc-q30" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XjC-yi-dNP"/>
                             <constraint firstItem="aHQ-T2-qga" firstAttribute="top" secondItem="knQ-av-W9o" secondAttribute="bottom" constant="50" id="Yfh-2p-MiY"/>
                             <constraint firstItem="hbT-zc-q30" firstAttribute="top" secondItem="goM-QK-dyM" secondAttribute="bottom" constant="8" symbolic="YES" id="cq6-SQ-tDh"/>
                             <constraint firstItem="3oZ-1D-rVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hyp-Xd-Lm0"/>
+                            <constraint firstItem="r3Z-qa-dGs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ix8-C1-ptn"/>
                             <constraint firstItem="3oZ-1D-rVo" firstAttribute="top" secondItem="aHQ-T2-qga" secondAttribute="bottom" constant="35" id="jYI-eF-MTz"/>
                             <constraint firstItem="5fn-5K-bPR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="khw-sZ-bxy"/>
                             <constraint firstItem="knQ-av-W9o" firstAttribute="top" secondItem="hbT-zc-q30" secondAttribute="bottom" constant="8" symbolic="YES" id="kl1-il-XMJ"/>
@@ -94,6 +105,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="M3A-yG-Q8d">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="gl6-xO-OYm" customClass="SecondViewController" customModule="MVVM_HW15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpF-zV-DOs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-r6-wEQ">
+                                <rect key="frame" x="90" y="721" width="234" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue with authorization"/>
+                                <connections>
+                                    <action selector="openStartPage:" destination="gl6-xO-OYm" eventType="touchUpInside" id="NmF-ZA-sSE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2el-Jr-Z8X"/>
+                        <color key="backgroundColor" red="0.58986720605656384" green="0.76501504582234126" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lOE-r6-wEQ" firstAttribute="leading" secondItem="2el-Jr-Z8X" secondAttribute="leading" constant="90" id="8kc-KS-HJX"/>
+                            <constraint firstItem="2el-Jr-Z8X" firstAttribute="trailing" secondItem="lOE-r6-wEQ" secondAttribute="trailing" constant="90" id="NWG-ph-GGv"/>
+                            <constraint firstItem="2el-Jr-Z8X" firstAttribute="bottom" secondItem="lOE-r6-wEQ" secondAttribute="bottom" constant="110" id="rT4-m5-UwV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kP-yN-gWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="94"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="MqA-Vp-ilo">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="ZQA-lc-i8K" customClass="ThirdViewController" customModule="MVVM_HW15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d93-e1-b1o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYz-Fn-yBm">
+                                <rect key="frame" x="100" y="721" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Exit"/>
+                                <connections>
+                                    <action selector="backToStartPage:" destination="ZQA-lc-i8K" eventType="touchUpInside" id="OGy-Hu-KOf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KTd-SR-zTe"/>
+                        <color key="backgroundColor" red="0.58858170673835597" green="0.61032060783938269" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GYz-Fn-yBm" firstAttribute="leading" secondItem="KTd-SR-zTe" secondAttribute="leading" constant="100" id="3zc-fb-Ny1"/>
+                            <constraint firstItem="KTd-SR-zTe" firstAttribute="trailing" secondItem="GYz-Fn-yBm" secondAttribute="trailing" constant="100" id="bgn-De-gZ5"/>
+                            <constraint firstItem="KTd-SR-zTe" firstAttribute="bottom" secondItem="GYz-Fn-yBm" secondAttribute="bottom" constant="110" id="ixH-Za-lGy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgu-Me-3Ei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="94"/>
         </scene>
     </scenes>
     <resources>
