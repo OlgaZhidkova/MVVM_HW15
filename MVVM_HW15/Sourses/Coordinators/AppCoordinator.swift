@@ -15,20 +15,27 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
+        showLogin()
+    }
+    
+    func showLogin() {
         let vc = ViewController.createObject()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        vc.viewModel = ViewModel()
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func openSecondVC() {
         let vc = SecondViewController.createObject()
         vc.coordinator = self
+        navigationController.viewControllers.removeAll()
         navigationController.pushViewController(vc, animated: true)
     }
     
     func openThirdVC() {
         let vc = ThirdViewController.createObject()
         vc.coordinator = self
+        navigationController.viewControllers.removeAll()
         navigationController.pushViewController(vc, animated: true)
     }
 }
