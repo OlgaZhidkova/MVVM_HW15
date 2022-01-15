@@ -9,10 +9,10 @@ import UIKit
 
 class SecondViewController: UIViewController, Storyboardable {
     
-    weak var coordinator: AppCoordinator?
+    var coordinator: AppCoordinator?
 
     @IBAction func openStartPage(_ sender: Any) {
-        coordinator?.start()
+        coordinator?.showLogin()
     }
     
     override func viewDidLoad() {
