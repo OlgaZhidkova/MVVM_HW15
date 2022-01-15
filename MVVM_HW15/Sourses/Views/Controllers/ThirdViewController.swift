@@ -9,10 +9,10 @@ import UIKit
 
 class ThirdViewController: UIViewController, Storyboardable {
     
-    weak var coordinator: AppCoordinator?
+    var coordinator: AppCoordinator?
 
     @IBAction func backToStartPage(_ sender: Any) {
-        coordinator?.start()
+        coordinator?.showLogin()
     }
     
     override func viewDidLoad() {
