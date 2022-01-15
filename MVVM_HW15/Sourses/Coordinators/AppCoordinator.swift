@@ -19,24 +19,24 @@ class AppCoordinator: Coordinator {
     }
     
     func showLogin() {
-        let vc = ViewController.createObject()
-        vc.coordinator = self
-        vc.viewModel = ViewModel()
-        navigationController.pushViewController(vc, animated: true)
+        let viewController = ViewController.createObject()
+        viewController.coordinator = self
+        viewController.viewModel = ViewModel()
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func openSecondVC() {
-        let vc = SecondViewController.createObject()
-        vc.coordinator = self
+        let viewController = SecondViewController.createObject()
+        viewController.coordinator = self
         navigationController.viewControllers.removeAll()
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func openThirdVC() {
-        let vc = ThirdViewController.createObject()
-        vc.coordinator = self
+        let viewController = ThirdViewController.createObject()
+        viewController.coordinator = self
         navigationController.viewControllers.removeAll()
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
